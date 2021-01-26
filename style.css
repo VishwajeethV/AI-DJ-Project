@@ -1,0 +1,26 @@
+.heading {
+    font-size: 25px;
+    width: 100%;
+    margin: 0px;
+}
+
+.note {
+   font-size: 20px;
+   color: indigo;
+}
+
+body {
+    background-size: cover;
+}
+
+canvas {
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: maroon;
+    border-style: ridge;
+}
+
+.name {
+    font: bold;
+    color: darkorange;
+}
