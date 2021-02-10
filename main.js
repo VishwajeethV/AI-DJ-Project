@@ -38,6 +38,12 @@ function draw() {
             song.stop("music2.mp3");
             song.play("music.mp3");
         }
+        if(song="music.mp3"){
+            document.getElementById("123").innerHTML="Name of the song :- Harry potter theme song";
+        }
+        else{
+            document.getElementById("123").innerHTML="Name of the song :- Peter pan";
+        }
  }
 }
 
