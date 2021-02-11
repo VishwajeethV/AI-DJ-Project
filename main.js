@@ -1,4 +1,5 @@
-song=""
+song1=""
+song2=""
 rightwristx=""
 rightwristy=""
 leftwristx=""
@@ -6,8 +7,8 @@ leftwristy=""
 leftwristscore=""
 
 function preload() {
-    song=loadSound("music.mp3");  
-    song=loadSound("music2.mp3");  
+    song1=loadSound("music.mp3");  
+    song2=loadSound("music2.mp3");  
 }
 function setup() {
     canvas=createCanvas(400,300);
@@ -29,22 +30,28 @@ function draw() {
     circle(leftwristx,leftwristy,20);
 
     if(leftwristscore>0.2) {
+        document.getElementById("123").innerHTML="Name of the song :- Peter pan";
         circle(leftwristX,leftwristY,20);   
-        if(song="music.mp3") {
-            song.stop("music.mp3");
-            song.play("music2.mp3");
+        if(song1.isPlaying()==true) {
+            song1.stop();
+            song2.play();
         }
         else{
-            song.stop("music2.mp3");
-            song.play("music.mp3");
-        }
-        if(song="music.mp3"){
-            document.getElementById("123").innerHTML="Name of the song :- Harry potter theme song";
-        }
-        else{
-            document.getElementById("123").innerHTML="Name of the song :- Peter pan";
+            song2.play();
         }
  }
+
+    if(rightwristscore>0.2) {
+         document.getElementById("123").innerHTML="Name of the song :- Harry potter theme song";
+        circle(rightwristX,rightwristY,20);   
+        if(song2.isPlaying()==true) {
+            song2.stop();
+            song1.play();
+        }
+        else{
+            song1.play();
+        }
+   }
 }
 
 function gotPoses(results) {
